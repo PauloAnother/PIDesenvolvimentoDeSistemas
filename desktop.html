@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Lista de tarefas</title>    
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+</head>
+
+<body background="src/SF-BG.png" style="justify-content: left;">
+
+    <div style="height: none; width: 10px; padding: 0px;">      
+        <label id="label_window" class="label" style="position: absolute; padding-left: 10px; float: none;">ANO 2024</label>
+        <img id="button_window" src="src/SF-Folder.png" onclick="openTask('2024')" style="width: 130px;">        
+    </div>
+
+    <div style="height: none; width: 10px; padding: 0px;">      
+        <label id="label_window" class="label" style="position: absolute; padding-left: 10px; float: none;">ANO 2025</label>
+        <img id="button_window" src="src/SF-Folder.png" onclick="openTask('2025')" style="width: 130px;">
+    </div>
+
+    <div style="height: none; width: 10px; padding: 0px;">      
+        <label id="label_window" class="label" style="position: absolute; padding-left: 10px; float: none;">ANO 2026</label>
+        <img id="button_window" src="src/SF-Folder.png" onclick="openTask('2026')" style="width: 130px;">
+    </div>
+
+    <div style="height: none; width: 10px; padding: 0px;">      
+        <label id="label_window" class="label" style="position: absolute; padding-left: 10px; float: none;">ANO 2027</label>
+        <img id="button_window" src="src/SF-Folder.png" onclick="openTask('2027')" style="width: 130px;">
+    </div>
+
+    <label id="time" style="position: absolute; bottom: 0.5%; right: 0.5%; color: white;">LOADING...</label>
+
+    <script src="script/common/localStorage.js"></script>
+    <script src="script/desktop/main.js"></script>
+    <script src="script/common/clock.js"></script>
+</body>
+
+</html>

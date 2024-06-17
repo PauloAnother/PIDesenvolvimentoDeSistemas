@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Lista de tarefas</title>    
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/style-table.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/style-tableChecklist.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/style-progress.css" media="screen" />
+</head>
+
+<body id="body" background="src/SF-BG.png">
+    
+    <div class="body">
+    
+        <div id="content">
+        
+        <div style="justify-content: center;">
+            <label id="label_window" class="label" style="position: initial; padding-left: 10px; float: right;">LOADING...</label>
+            <img id="button_window" src="src/arrow-drop-up.svg" onclick="closeTask()" style="width: 30px;">
+        </div>
+        
+        <div id="window"> 
+            
+            <div class="input-button">
+
+                <div>                
+                    <label for="task_list" class="label">ID</label>
+                    
+                    <select id="combobox_month" onChange="monthSelectedChange()" style="float: right;">
+                        <option value=""></option>
+                    </select>            
+
+                    <label for="task_list" id="id" class="label"></label>
+                    <div id="myProgress">
+                        <div id="myBar">0%</div>
+                    </div>
+                    </br>
+                </div> 
+
+                <div>                
+                    <label for="task_list" class="label">Nome Tarefa</label>     
+                    <input type="text" id="sm" class="textbox">                
+                </div> 
+            
+                <div>
+                    <label for="task_list" class="label">Descricao</label>
+                    <input type="text" id="description" class="textbox">
+                </div>
+            
+                </br>
+
+                <label for="checklist_list" class="label">Check List</label>
+                <button onclick="buttonHideChecklist()"></button>
+                <div id="div_checklist" style="display: none;">                    
+                    <input type="text" id="checklist_description" class="textbox">
+                    <div id="command_buttons">
+                        <img src="src/save_icon.svg" onclick="addChecklist()" class="button_small">                  
+                        <img src="src/update_icon.svg" onclick="updateChecklist()" class="button_small">         
+                    </div> 
+
+                    <table id='list_checklist_table' class="list_tableChecklist">
+                        <thead>
+                            <tr>
+                                <!-- <th>ID</th> -->
+                                <th></th>
+                                <th></th>
+                                <th style="width: 10px;"></th>
+                                <th style="width: 10px;"></th>
+                                <th style="width: 10px;"></th>
+                            <tr>
+                        </thead>
+            
+                        <tbody id="table_checklist_body"></tbody>
+                    </table>
+                </div>
+                <br>
+                <div>
+                    <textarea name="notes" id="textarea_notes" class="textarea"></textarea>
+                </div>
+
+                </br>
+
+                <div id="command_buttons">
+                    <img src="src/save_icon.svg" onclick="addTask()" class="button">
+                    <img src="src/update_icon.svg" onclick="updateTask()" class="button">
+                    <img src="src/delete_icon.svg" onclick="deleteTask()" class="button">  
+                    
+                    <img src="src/button_month_up.svg" onclick="upTask()" class="button">
+                    <img src="src/button_month_down.svg" onclick="downTask()" class="button">              
+                </div>            
+
+            </div>
+
+            </br>
+            <table id='list_table' class="list_table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome Tarefa</th>
+                        <th>Descricao</th>
+                        <th>Progresso</th>
+                    <tr>
+                </thead>
+
+                <tbody id="table_body"></tbody>
+            </table>
+            <br>
+            <pre id="output"></pre>
+            
+        </div>
+        </div>
+
+    </div>
+
+    <label id="time" style="position: absolute; bottom: 0.5%; right: 0.5%; color: white;">LOADING...</label>
+
+    <script src="script/common/localStorage.js"></script>
+    <script src="script/mission/checkList.js"></script>
+    <script src="script/mission/task.js"></script>
+    <script src="script/mission/main.js"></script>
+    <script src="script/common/clock.js"></script>
+</body>
+
+</html>
