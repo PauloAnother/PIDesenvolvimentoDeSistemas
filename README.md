@@ -1,3 +1,3 @@
-# Lista de tarefas com localStorage e backup em txt
+# Lista de tarefas com Banco de dados local e API
 
 ---
