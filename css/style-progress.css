@@ -1,0 +1,17 @@
+#myProgress {
+    background-color: rgb(11, 23, 39); 
+    border-radius:1cm;
+    /* rgb(211, 215, 224) */
+    border: double;
+}
+
+#myBar {
+    width: 0%;
+    height: 20px;
+    /* background-color: rgb(100, 70, 197); */
+    background-color:rgb(31, 60, 102);
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 20px; /* To center it vertically */
+    color: white;
+    border-radius:1cm;
+}
